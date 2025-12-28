@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { socials } from "../data/social"
 
 
 const Hero = () => {
@@ -17,6 +18,22 @@ const Hero = () => {
         I'm a frontend web developer who enjoys building clean, fast, and user-friendly web applications.
     </p>
 
+{/* SOCIAL ICONS */}
+<div className="m-5 flex gap-6">
+    {socials.map((social)=>{
+        const Icon = social.icon;
+        return(
+            <a key={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-400 hover:text-white transition-all duration-200"
+            >
+                <Icon size={28} />
+            </a>
+        )
+    })}
+</div>
    
     <div className="mt-2 flex gap-4">
         <a

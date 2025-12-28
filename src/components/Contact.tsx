@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 text-center">
+    <section id="contact" className="py-15 text-center">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,7 @@ export default function Contact() {
         viewport={{ once: true }}
         className="text-3xl md:text-4xl font-bold"
       >
-        Let’s Work Together
+        Let's Work Together
       </motion.h2>
 
       {/* Subtext */}

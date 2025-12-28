@@ -1,57 +1,96 @@
-import Image from "next/image"
-import { socials } from "../data/social"
+"use client";
 
+import Image from "next/image";
+import { socials } from "../data/social";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-   <section className="min-h-screen flex  justify-center bg-gradient-to-b from-orange-500 to-neutral-950
- flex-col items-center text-center px-6">
+    <section className="relative min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-20 overflow-hidden">
 
+      {/* Background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-orange-500/20 via-neutral-950 to-neutral-950" />
+      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-indigo-500/20 blur-[140px] rounded-full -z-10" />
 
-    <h1 className="text-3xl md:text-6xl font-bold mt-10">
-        Hi, I'm <span className="text-indigo-500">Priyanka Aswal</span>  
-    </h1>
+      {/* LEFT CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="space-y-6"
+      >
+        <p className="text-indigo-400 tracking-widest uppercase text-sm">
+          Frontend Web Developer
+        </p>
 
-<Image alt="photo" src='/profile.png' width={200} height={400} className="rounded-2xl rotate-6 m-5 "/>
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+          Building clean <br />
+          <span className="text-indigo-400">web experiences</span>
+        </h1>
 
-    <p className="mt-4 max-w-2xl text-lg text-neutral-300">
-        I'm a frontend web developer who enjoys building clean, fast, and user-friendly web applications.
-    </p>
+        <p className="max-w-md text-neutral-300">
+         I'm a frontend developer who loves building modern, fast, and user-centric web applications.
+        </p>
 
-{/* SOCIAL ICONS */}
-<div className="m-5 flex gap-6">
-    {socials.map((social)=>{
-        const Icon = social.icon;
-        return(
-            <a key={social.name}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-neutral-400 hover:text-white transition-all duration-200"
+        {/* CTA */}
+        <div className="flex gap-4 pt-4">
+          <a
+            href="#projects"
+            className="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 transition shadow-lg"
+          >
+            View Work
+          </a>
+
+          <a
+            href="#contact"
+            className="px-6 py-3 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition"
+          >
+            Contact Me
+          </a>
+        </div>
+      </motion.div>
+
+      {/* RIGHT IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="relative flex justify-center md:justify-end mt-10 md:mt-0"
+      >
+        <motion.div
+          animate={{ y: [0, -15, 0] }}
+          transition={{ repeat: Infinity, duration: 4 }}
+          className="relative"
+        >
+          <Image
+            src="/profile.png"
+            alt="Priyanka Aswal"
+            width={300}
+            height={300}
+            className="rounded-3xl shadow-2xl rotate-6"
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* SOCIALS – VERTICAL (UNIQUE TOUCH) */}
+      <div className="hidden md:flex flex-col gap-15 absolute left-8 bottom-62">
+        {socials.map((social) => {
+          const Icon = social.icon;
+          return (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition hover:scale-110"
             >
-                <Icon size={28} />
+              <Icon size={22} />
             </a>
-        )
-    })}
-</div>
-   
-    <div className="mt-2 flex gap-4">
-        <a
-        href="#projects"
-        className="px-6 py-3 rounded-lg bg-blue-800 hover:bg-blue-700 transition"
-        >
-            View Projects
-        </a>
-        <a
-        href="#contact"
-        className="px-6 py-3 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition"
-        >
-            Contact
-        </a>
-    </div>
-     
-   </section>
-  )
-}
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;

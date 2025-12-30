@@ -19,7 +19,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="space-y-6"
       >
-        <p className="text-indigo-400 tracking-widest uppercase text-sm">
+        <p className="text-indigo-400 tracking-widest uppercase text-sm mt-6 lg:mt-0">
           Frontend Web Developer
         </p>
 
@@ -65,8 +65,8 @@ const Hero = () => {
           <Image
             src="/profile.png"
             alt="Priyanka Aswal"
-            width={300}
-            height={300}
+            width={280}
+            height={280}
             className="rounded-3xl shadow-2xl rotate-6"
           />
         </motion.div>

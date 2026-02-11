@@ -36,7 +36,7 @@ const Projects = () => {
                         </span>
                     ))}
                 </div>
-                <span className='mt-4 inline-block text-sm text-indigo-400 group-hover:underline'>
+                <span className='mt-5 inline-block text-sm text-indigo-400 group-hover:underline'>
                     View project &rarr;
                 </span>
             </a>

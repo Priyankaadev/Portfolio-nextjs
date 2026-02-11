@@ -8,13 +8,13 @@ export const projects = [
     link: "https://github.com/Priyankaadev/FrontendProject-Techpyro",
   },
   {
-    title: "Movie Searching App",
-    img:"/moviesearching.png",
+    title: "Therapy App",
+    img:"/desktopview.jpeg",
     description:
-      "Implemented debounced search with autocomplete to optimize performance by reducing unnecessary API calls and delivering a smooth, responsive user experience.",
-    tech: ["React", "CSS"],
+      "Developed a responsive, SEO-ready website with structured content flow and optimized performance. Focused on clean UI design, mobile-first responsiveness, and scalable component architecture.",
+    tech: ["Nextjs", "TailwindCSS"],
    
-    link: "https://movie-searching-app-puce.vercel.app/",
+    link: "https://lilac-template-eight.vercel.app/",
   },
   {
     title: "Brofit Landing Page",

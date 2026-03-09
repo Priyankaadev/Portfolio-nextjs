@@ -1,12 +1,12 @@
 export const projects = [
   {
-    title: "Event Blog App",
-    img:"/event.png",
-    description:
-      "Built an Event Blog App using Next.js for server-side rendering and optimized performance, implementing Redux for global state management and React Context API for authentication.",
-    tech: ["Next.js", "Tailwind", "Material UI"],
-    link: "https://github.com/Priyankaadev/FrontendProject-Techpyro",
-  },
+    title: "ShaadiBio Web App",
+    img: "/shaadi.png",
+    description: "Developed a matrimonial biodata generator that allows users to input personal details and instantly download professional PDF profiles. Built with Next.js and Tailwind CSS for a responsive and multi-step form interface.",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    link: "https://shaadi-bio-web-app.vercel.app/"
+},
+  
   {
     title: "Therapy App",
     img:"/desktopview.jpeg",

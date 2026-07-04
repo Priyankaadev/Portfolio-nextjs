@@ -18,7 +18,10 @@ export default function Experience() {
       </motion.h2>
 
       {/* Featured Card */}
+      <div className="space-y-8 max-w-3xl mx-auto">
+    {experience.map((exp, index) => (
       <motion.div
+      key={index}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -30,25 +33,25 @@ export default function Experience() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
           <div>
             <h3 className="text-xl font-semibold">
-              {experience.role}
+              {exp.role}
             </h3>
             <p className="text-indigo-400">
-              {experience.company}
+              {exp.company}
             </p>
           </div>
           <span className="text-sm text-neutral-400">
-            {experience.duration}
+            {exp.duration}
           </span>
         </div>
 
         {/* Description */}
         <p className="mt-4 text-neutral-300 leading-relaxed">
-          {experience.desc}
+          {exp.desc}
         </p>
 
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mt-5">
-          {experience.tech.map((tech) => (
+          {exp.tech.map((tech) => (
             <span
               key={tech}
               className="px-3 py-1 text-xs rounded-full bg-neutral-800 text-neutral-300"
@@ -58,6 +61,8 @@ export default function Experience() {
           ))}
         </div>
       </motion.div>
+      ))}
+      </div>
     </section>
   );
 }

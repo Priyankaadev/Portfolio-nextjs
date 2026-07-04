@@ -15,7 +15,7 @@ export const socials: { name: string; href: string; icon: IconType }[] = [
   },
   {
     name: "Resume",
-    href: "https://docs.google.com/document/d/10A2nqiHdKF92hKNZGH0A8clcB44LpwKO_KThnXPbR1c/edit?usp=sharing",
+    href: "https://docs.google.com/document/d/1MtfTmVAuZd-BvmMmdyhsJW-6AKG0P4RjeWyYilmoccI/edit?usp=sharing",
     icon: IoReaderOutline,
   },
  
